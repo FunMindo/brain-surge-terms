@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Service – Brain Surge | FunMindo</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --gold:    #F5A623;
+  --orange:  #E8491D;
+  --teal:    #00C6B8;
+  --bg:      #F7F8FA;
+  --surface: #FFFFFF;
+  --border:  #E8EBF2;
+  --text:    #1A1D2E;
+  --muted:   #6B7280;
+  --soft:    #F0F2F8;
+  --r:       12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+
+/* Animated top stripe */
+.top-stripe{height:4px;background:linear-gradient(90deg,var(--gold) 0%,var(--orange) 35%,var(--teal) 65%,var(--gold) 100%);background-size:300% 100%;animation:stripe 4s linear infinite}
+@keyframes stripe{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+
+.wrapper{max-width:860px;margin:0 auto;padding:48px 24px 80px}
+
+/* Header */
+.header{text-align:center;margin-bottom:56px;animation:fup .5s ease both}
+@keyframes fup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.studio-badge{display:inline-flex;align-items:center;gap:8px;background:#FFF7ED;border:1.5px solid #FDDFA5;border-radius:999px;padding:6px 18px;font-family:'Syne',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B45309;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pdot 1.8s ease-in-out infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+.header h1{font-family:'Syne',sans-serif;font-size:clamp(30px,5.5vw,50px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--text);margin-bottom:16px}
+.game-name{display:inline-block;position:relative}
+.game-name span{background:linear-gradient(120deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.game-name::after{content:'';position:absolute;left:0;bottom:-3px;width:100%;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--orange));transform:scaleX(0);transform-origin:left;animation:uline .6s .4s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes uline{to{transform:scaleX(1)}}
+
+.header-meta{color:var(--muted);font-size:13.5px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.header-meta strong{color:var(--text);font-weight:600}
+.sep{color:var(--border)}
+
+/* Notice */
+.notice{background:#FFFBEB;border:1.5px solid #FDE68A;border-left:4px solid var(--gold);border-radius:var(--r);padding:16px 20px;margin-bottom:40px;display:flex;gap:12px;align-items:flex-start;font-size:13.5px;line-height:1.65;color:#78350F;animation:fup .5s .1s ease both}
+.notice-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+
+/* Section cards */
+.section{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:28px 28px 24px;margin-bottom:16px;transition:border-color .25s,box-shadow .25s,transform .25s;animation:fup .45s ease both}
+.section:nth-child(1){animation-delay:.10s}.section:nth-child(2){animation-delay:.14s}.section:nth-child(3){animation-delay:.18s}.section:nth-child(4){animation-delay:.22s}.section:nth-child(5){animation-delay:.26s}.section:nth-child(6){animation-delay:.30s}.section:nth-child(7){animation-delay:.34s}.section:nth-child(8){animation-delay:.38s}.section:nth-child(9){animation-delay:.42s}.section:nth-child(10){animation-delay:.46s}.section:nth-child(11){animation-delay:.50s}.section:nth-child(12){animation-delay:.54s}.section:nth-child(13){animation-delay:.58s}.section:nth-child(14){animation-delay:.62s}.section:nth-child(15){animation-delay:.66s}.section:nth-child(16){animation-delay:.70s}.section:nth-child(17){animation-delay:.74s}
+.section:hover{border-color:#FDDFA5;box-shadow:0 4px 20px rgba(245,166,35,.1);transform:translateY(-1px)}
+
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.section-num{width:30px;height:30px;flex-shrink:0;border-radius:9px;background:linear-gradient(135deg,var(--gold),var(--orange));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:#fff;box-shadow:0 2px 8px rgba(245,166,35,.35)}
+h2{font-family:'Syne',sans-serif;font-size:15.5px;font-weight:700;color:var(--text);letter-spacing:.01em}
+p{color:#374151;margin-bottom:10px;font-size:14.5px}
+p:last-child{margin-bottom:0}
+
+/* Arrow list */
+.pp-list{list-style:none;margin-top:6px}
+.pp-list li{padding:5px 0 5px 22px;position:relative;font-size:14px;color:#374151}
+.pp-list li::before{content:'→';position:absolute;left:0;color:var(--orange);font-size:12px;top:8px}
+
+/* Info tiles */
+.info-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
+.info-tile{background:var(--soft);border-radius:10px;padding:14px 16px}
+.info-tile .label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:4px;font-family:'Syne',sans-serif}
+.info-tile .value{font-size:14px;font-weight:600;color:var(--text)}
+
+/* Tag chips */
+.tag{display:inline-block;border-radius:6px;padding:2px 9px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.tag-blue{background:#EFF6FF;color:#1D4ED8}
+.tag-green{background:#F0FDF4;color:#15803D}
+.tag-orange{background:#FFF7ED;color:#C2410C}
+.tag-red{background:#FEF2F2;color:#B91C1C}
+.tag-teal{background:#F0FDFA;color:#0F766E}
+
+/* Feature grid */
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.feature-card{background:var(--soft);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.feature-card .fc-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.feature-card .fc-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.feature-card .fc-desc{font-size:12.5px;color:var(--muted);line-height:1.55}
+
+/* Ad notice tile */
+.ad-tile{background:linear-gradient(135deg,#FFF7ED 0%,#FFFBEB 100%);border:1.5px solid #FDE68A;border-radius:var(--r);padding:16px 20px;display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:#78350F;margin-top:12px}
+
+/* Contact card */
+.contact-card{background:linear-gradient(135deg,#FFFBEB 0%,#FFF7ED 100%);border:1.5px solid #FDE68A;border-radius:var(--r);padding:24px 28px;margin-top:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.contact-icon{font-size:30px;flex-shrink:0}
+.contact-text h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin-bottom:5px}
+.contact-text p{font-size:13.5px;color:var(--muted);margin:0}
+.contact-text a{color:var(--orange);text-decoration:none;font-weight:600}
+.contact-text a:hover{text-decoration:underline}
+
+/* Free badge */
+.free-badge{display:inline-flex;align-items:center;gap:7px;background:#F0FDF4;border:1.5px solid #BBF7D0;border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:600;color:#15803D;margin-top:10px}
+.free-badge::before{content:'✓';font-size:11px;color:#16A34A}
+
+/* Footer */
+.footer{margin-top:52px;padding-top:28px;border-top:1.5px solid var(--border);text-align:center;color:var(--muted);font-size:12.5px;line-height:1.9}
+.fm-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;background:linear-gradient(120deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block}
+
+/* Table */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:8px}
+.data-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.data-table th{background:var(--soft);color:#374151;font-family:'Syne',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:10px 14px;text-align:left;border-bottom:1.5px solid var(--border)}
+.data-table td{padding:11px 14px;border-bottom:1px solid #F3F4F6;color:#374151;vertical-align:top;font-size:13.5px}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:#FFFBEB}
+
+/* Mobile */
+@media(max-width:640px){
+  .wrapper{padding:24px 16px 60px}
+  .section{padding:18px 16px 16px;margin-bottom:12px}
+  .header{margin-bottom:32px}
+  h2{font-size:14px}
+  p{font-size:13.5px}
+  .notice{padding:14px;font-size:13px}
+  .feature-grid{grid-template-columns:1fr}
+  .info-row{grid-template-columns:1fr 1fr}
+  .contact-card{padding:18px 16px;flex-direction:column;gap:10px}
+  .data-table thead{display:none}
+  .data-table tr{display:block;padding:8px 0;border-bottom:1px solid #F3F4F6}
+  .data-table td{display:block;border:none;padding:3px 0;font-size:13px}
+  .data-table td::before{content:attr(data-label);display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:2px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<div class="top-stripe"></div>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="studio-badge"><span class="dot"></span>FunMindo Studio</div>
+    <h1>Terms of Service<br/><span class="game-name"><span>Brain Surge</span></span></h1>
+    <div class="header-meta">
+      Effective: <strong>June 25, 2026</strong>
+      <span class="sep">·</span>
+      Last Updated: <strong>June 25, 2026</strong>
+      <span class="sep">·</span>
+      Jurisdiction: <strong>India</strong>
+    </div>
+  </header>
+
+  <!-- INTRO NOTICE -->
+  <div class="notice">
+    <span class="notice-icon">📋</span>
+    <span>
+      Please read these Terms of Service ("Terms") carefully before downloading or playing
+      <strong>Brain Surge</strong> ("the Game"). These Terms form a legal agreement between you ("you",
+      "the User") and <strong>FunMindo</strong> ("we", "our", "us"), the developer and publisher of
+      Brain Surge. By installing or playing the Game, you confirm that you have read, understood, and
+      agree to be bound by these Terms. If you do not agree, please do not install or use the Game.
+    </span>
+  </div>
+
+  <!-- SECTIONS -->
+
+  <!-- 1 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">1</div><h2>About Brain Surge</h2></div>
+    <p>Brain Surge is a free-to-play, offline trivia and quiz mobile game developed and published by
+       FunMindo, an indie game studio based in India. The Game is available on the Google Play Store
+       for Android devices.</p>
+    <div class="feature-grid" style="margin-top:14px">
+      <div class="feature-card">
+        <div class="fc-icon">🧠</div>
+        <div>
+          <div class="fc-title">Quiz &amp; Trivia</div>
+          <div class="fc-desc">Multiple-choice questions across 10+ categories, three difficulty levels, and a daily Question of the Day.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">⚡</div>
+        <div>
+          <div class="fc-title">Lifelines</div>
+          <div class="fc-desc">Three lifelines per game — 50/50, Skip, and +10 Seconds — each usable once free, then via a rewarded ad.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🏆</div>
+        <div>
+          <div class="fc-title">XP &amp; Ranks</div>
+          <div class="fc-desc">Earn XP to level up through rank tiers, unlock new quiz categories, and build daily login streaks.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🎮</div>
+        <div>
+          <div class="fc-title">Completely Free</div>
+          <div class="fc-desc">No in-app purchases. The Game is 100% free to download and play, supported only by advertisements.</div>
+        </div>
+      </div>
+    </div>
+    <div class="free-badge" style="margin-top:14px">No in-app purchases — free to play forever</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">2</div><h2>Acceptance of Terms</h2></div>
+    <p>By downloading, installing, accessing, or playing Brain Surge, you confirm that you:</p>
+    <ul class="pp-list">
+      <li>If you are under the age of majority in your jurisdiction, you must use the Game with the consent or supervision of a parent or legal guardian;</li>
+      <li>Have the legal capacity to enter into a binding agreement in your jurisdiction;</li>
+      <li>Have read and agree to these Terms in their entirety; and</li>
+      <li>Accept our <a href="https://funmindo.github.io/brainsurge/privacy.html" style="color:var(--orange);font-weight:600;text-decoration:none">Privacy Policy</a>, which is incorporated into these Terms by reference.</li>
+    </ul>
+    <p style="margin-top:10px">If you do not meet these requirements or do not agree to these Terms, you must not install or use the Game.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">3</div><h2>License to Use the Game</h2></div>
+    <p>Subject to your compliance with these Terms, FunMindo grants you a personal, non-exclusive,
+       non-transferable, revocable, limited license to download, install, and use Brain Surge on
+       Android devices you own or control, solely for your personal, non-commercial entertainment.</p>
+    <p>This license does <strong>not</strong> allow you to:</p>
+    <ul class="pp-list">
+      <li>Copy, modify, distribute, sell, or sublicense any part of the Game;</li>
+      <li>Reverse-engineer, decompile, disassemble, or attempt to derive the source code of the Game;</li>
+      <li>Create derivative works based on the Game or its content;</li>
+      <li>Remove, obscure, or alter any copyright, trademark, or other proprietary notices;</li>
+      <li>Use the Game for any commercial purpose or for the benefit of any third party;</li>
+      <li>Use any automated tool, bot, script, or hack to interact with the Game;</li>
+      <li>Exploit bugs or glitches intentionally for personal gain.</li>
+    </ul>
+    <p style="margin-top:10px">All rights not expressly granted in these Terms are reserved by FunMindo.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">4</div><h2>Game Features &amp; Content</h2></div>
+
+    <p><strong>Question Database.</strong> Brain Surge contains a built-in question database across categories
+       including Animals, Science, Geography, Food &amp; Cooking, Music, History, Sports, Technology, Literature,
+       Maths &amp; Logic, Movies, and more. Questions are provided for educational and entertainment purposes only.
+       While we strive for accuracy, we make no guarantee that every answer or fact is free from error.</p>
+
+    <p style="margin-top:10px"><strong>Categories &amp; Unlocks.</strong> Two categories — Animals and Science — are
+       unlocked by default. Additional categories are unlocked by earning XP through gameplay. No purchase is
+       required to unlock any category. Special game modes (Sharp and Blitz) within each category may require
+       spending in-game XP coins earned through normal play.</p>
+
+    <p style="margin-top:10px"><strong>Daily Question of the Day.</strong> One bonus question is available per calendar
+       day. Completion resets at midnight. This is an optional feature with no penalty for skipping.</p>
+
+    <p style="margin-top:10px"><strong>Login Streaks.</strong> Daily login streaks are tracked locally on your device.
+       A Streak Shield (watchable via rewarded ad) may protect one missed day. Streaks and all progress are
+       stored on your device only and will be lost if you clear app data or uninstall the Game.</p>
+
+    <p style="margin-top:10px"><strong>Lifelines.</strong> Each game session includes three lifelines (50/50, Skip, +10s).
+       Each lifeline may be used once for free per session. After the free use, it becomes an ad-supported lifeline
+       — watching a short rewarded video ad restores that lifeline for the current session.</p>
+
+    <p style="margin-top:10px"><strong>XP &amp; Ranks.</strong> XP is earned by answering questions correctly, maintaining
+       streaks, and using the Double XP feature (via rewarded ad). Ranks are cosmetic only and confer no real-world
+       value or monetary benefit.</p>
+
+    <p style="margin-top:10px"><strong>Themes &amp; Customisation.</strong> Decorative visual themes may be unlocked
+       through XP or rewarded ads. Themes are cosmetic and do not affect gameplay.</p>
+
+    <p style="margin-top:10px"><strong>Content Updates.</strong> We may add, modify, or remove questions, categories,
+       features, or in-game content at any time without prior notice.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">5</div><h2>Advertisements</h2></div>
+    <p>Brain Surge is free to play and is supported by advertisements delivered by <strong>Google AdMob</strong>.
+       By using the Game, you consent to the display of advertisements as described below.</p>
+
+    <div class="table-scroll" style="margin-top:12px">
+      <table class="data-table">
+        <thead>
+          <tr><th>Ad Type</th><th>When It Appears</th><th>Can You Skip?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Ad Type"><span class="tag tag-orange">Interstitial</span></td>
+            <td data-label="When It Appears">Shown automatically between quiz sessions or at natural transition points (e.g. after viewing results).</td>
+            <td data-label="Can You Skip?">Yes — after a short required interval.</td>
+          </tr>
+          <tr>
+            <td data-label="Ad Type"><span class="tag tag-blue">Rewarded Video</span></td>
+            <td data-label="When It Appears">Shown only when you voluntarily choose to watch an ad to restore a lifeline, activate Double XP, or protect your streak.</td>
+            <td data-label="Can You Skip?">No — must be watched in full to earn the reward.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ad-tile" style="margin-top:14px">
+      <span style="font-size:18px;flex-shrink:0">📢</span>
+      <div>
+        <strong>Important:</strong> Ads are served by Google AdMob and are subject to Google's own policies and
+        content controls. Brain Surge is rated 3+ on Google Play and is intended for a general audience; FunMindo
+        configures ad units accordingly. However, FunMindo cannot guarantee the content of every individual
+        advertisement served by Google. FunMindo is not responsible for the content of third-party ads.
+        If you encounter an inappropriate ad, please report it using the "Why this ad?" option or contact us at
+        <a href="mailto:funmindostudio@gmail.com" style="color:var(--orange);font-weight:600;text-decoration:none">funmindostudio@gmail.com</a>.
+      </div>
+    </div>
+
+    <p style="margin-top:12px;font-size:13.5px;color:var(--muted)">
+      Ad personalisation is handled by Google AdMob. You can opt out of personalised ads via
+      <strong>Android Settings → Google → Ads → Opt out of Ads Personalisation</strong>.
+    </p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">6</div><h2>No In-App Purchases</h2></div>
+    <p>Brain Surge does not offer any in-app purchases, premium tiers, paid content, subscriptions, or
+       virtual currency available for real money. All gameplay content — including all quiz categories,
+       lifelines, and XP rewards — is obtainable through normal gameplay or by watching optional rewarded
+       ads. There is no way to spend real money inside the Game.</p>
+    <div class="info-row">
+      <div class="info-tile"><div class="label">Download Cost</div><div class="value">Free</div></div>
+      <div class="info-tile"><div class="label">In-App Purchases</div><div class="value">None</div></div>
+      <div class="info-tile"><div class="label">Subscriptions</div><div class="value">None</div></div>
+      <div class="info-tile"><div class="label">Real-Money Content</div><div class="value">None</div></div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">7</div><h2>Intellectual Property</h2></div>
+    <p>Brain Surge, including its name, logo, visual design, UI elements, question content, game mechanics,
+       mascot character ("Spark"), sound effects, music, and all related materials, is the exclusive intellectual
+       property of FunMindo and is protected by applicable copyright, trademark, and other intellectual property
+       laws in India and internationally.</p>
+    <p>You are not permitted to use FunMindo's name, logo, or any Brain Surge branding without our prior
+       written consent. Nothing in these Terms transfers any intellectual property rights to you.</p>
+    <p>The trivia question content in Brain Surge is original or based on publicly known facts. If you believe
+       any question content infringes your intellectual property, please contact us at
+       <a href="mailto:funmindostudio@gmail.com" style="color:var(--orange);font-weight:600;text-decoration:none">funmindostudio@gmail.com</a>.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">8</div><h2>User Conduct</h2></div>
+    <p>While Brain Surge is a single-player offline game with no online features, you agree to use the
+       Game only for lawful, personal purposes. You must not:</p>
+    <ul class="pp-list">
+      <li>Use the Game in any way that violates applicable laws or regulations;</li>
+      <li>Attempt to cheat, hack, or manipulate the Game's scoring or XP systems;</li>
+      <li>Use automated scripts or tools to simulate gameplay;</li>
+      <li>Distribute modified versions of the Game or its content;</li>
+      <li>Use the Game to defame, harass, or harm any person or entity;</li>
+      <li>Attempt to circumvent or disable advertisements in a manner that violates applicable law.</li>
+    </ul>
+    <p style="margin-top:10px">FunMindo reserves the right to update these Terms to address any misuse as the Game evolves.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">9</div><h2>Game Progress &amp; Data Loss</h2></div>
+    <p>All game progress — including your score history, XP, unlocked categories, rank, daily streaks,
+       lifeline states, and settings — is stored <strong>locally on your device</strong>. FunMindo does not
+       maintain any cloud backup or server-side save system.</p>
+    <ul class="pp-list">
+      <li><strong>Data loss on uninstall:</strong> Uninstalling the Game will permanently delete all local game data. This cannot be undone by FunMindo.</li>
+      <li><strong>Data loss on device change:</strong> Moving to a new device will result in loss of game progress, as no transfer mechanism exists.</li>
+      <li><strong>Data loss on app data clear:</strong> Clearing the app's data in Android settings will reset all progress.</li>
+    </ul>
+    <p style="margin-top:10px">FunMindo is not responsible for any loss of game progress arising from the above scenarios,
+       device failure, OS updates, or any other cause. We strongly encourage you to be aware of this limitation.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">10</div><h2>Disclaimer of Warranties</h2></div>
+    <p>Brain Surge is provided on an <strong>"AS IS" and "AS AVAILABLE"</strong> basis, without any warranties
+       of any kind, either express or implied. To the maximum extent permitted under applicable law, FunMindo
+       disclaims all warranties, including but not limited to:</p>
+    <ul class="pp-list">
+      <li>Implied warranties of merchantability and fitness for a particular purpose;</li>
+      <li>Warranties that the Game will be error-free, uninterrupted, or free from bugs;</li>
+      <li>Warranties regarding the accuracy or completeness of trivia question content;</li>
+      <li>Warranties that defects will be corrected, or that the Game is free of viruses or other harmful components.</li>
+    </ul>
+    <p style="margin-top:10px">Your use of the Game is at your sole risk. Some jurisdictions do not allow the exclusion of certain
+       warranties, so some of the above may not apply to you.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">11</div><h2>Limitation of Liability</h2></div>
+    <p>To the maximum extent permitted by applicable law, FunMindo and its founders, contributors, and
+       affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive
+       damages arising from your use of, or inability to use, Brain Surge. This includes, without
+       limitation:</p>
+    <ul class="pp-list">
+      <li>Loss of game progress, scores, XP, ranks, or streaks;</li>
+      <li>Device malfunction, battery drain, or data charges incurred;</li>
+      <li>Any damage resulting from third-party advertisements served by Google AdMob;</li>
+      <li>Loss of data due to uninstallation, device failure, or OS changes;</li>
+      <li>Any reliance placed on trivia content presented in the Game.</li>
+    </ul>
+    <p style="margin-top:10px">To the maximum extent permitted by law, FunMindo's total liability arising from the Game shall not exceed the amount paid by you for the Game during the twelve months preceding the claim. Since Brain Surge is provided free of charge, this amount will typically be ₹0.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">12</div><h2>Third-Party Services</h2></div>
+    <p>Brain Surge integrates the following third-party services. By using the Game, you also agree
+       to their applicable terms and privacy policies:</p>
+    <ul class="pp-list">
+      <li>
+        <strong>Google AdMob</strong> — Serves interstitial and rewarded video advertisements.
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+           style="color:var(--orange);font-weight:600;text-decoration:none;font-size:13px;margin-left:4px">
+          Google Privacy Policy ↗
+        </a>
+      </li>
+      <li>
+        <strong>Google Play Services</strong> — Required for Android app distribution and certain
+        core platform features.
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener"
+           style="color:var(--orange);font-weight:600;text-decoration:none;font-size:13px;margin-left:4px">
+          Google Terms of Service ↗
+        </a>
+      </li>
+    </ul>
+    <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">
+      FunMindo is not responsible for the privacy practices, terms, or content of these third-party services.
+      We encourage you to review their policies independently.
+    </p>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">13</div><h2>Modifications to the Game &amp; Terms</h2></div>
+    <p><strong>Game changes:</strong> FunMindo reserves the right to update, modify, suspend, or discontinue
+       Brain Surge (or any part of it) at any time, with or without notice. We may add new features, remove
+       existing ones, change gameplay mechanics, or update question content at our sole discretion.</p>
+    <p style="margin-top:10px"><strong>Terms changes:</strong> We may revise these Terms at any time. Updated Terms
+       will be posted at
+       <a href="https://funmindo.github.io/brainsurge/terms.html"
+          style="color:var(--orange);font-weight:600;text-decoration:none">
+         funmindo.github.io/brainsurge/terms.html
+       </a>
+       with a revised "Last Updated" date. Continued use of the Game after any change constitutes acceptance
+       of the updated Terms.</p>
+    <p style="margin-top:10px">For significant changes, we will endeavour to notify users through an in-game notice or via
+       the Google Play Store update description.</p>
+  </div>
+
+  <!-- 14 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">14</div><h2>Termination</h2></div>
+    <p>These Terms remain in effect until terminated. Your rights under these Terms terminate automatically
+       and without notice if you fail to comply with any provision herein.</p>
+    <p style="margin-top:10px">FunMindo may also discontinue the Game or stop distributing it on the Google Play Store at any
+       time. Upon termination for any reason:</p>
+    <ul class="pp-list">
+      <li>All licenses granted to you under these Terms immediately cease;</li>
+      <li>You must stop using the Game and delete it from your devices.</li>
+    </ul>
+    <p style="margin-top:10px">Provisions of these Terms that by their nature should survive termination (including intellectual
+       property, limitation of liability, disclaimers, and governing law) will continue to apply.</p>
+  </div>
+
+  <!-- 15 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">15</div><h2>Governing Law &amp; Dispute Resolution</h2></div>
+    <p>These Terms are governed by and construed in accordance with the laws of <strong>India</strong>,
+       including the Information Technology Act, 2000, the Consumer Protection Act, 2019, and other
+       applicable Indian statutes.</p>
+    <p style="margin-top:10px">Any dispute, claim, or controversy arising out of or relating to these Terms or the Game shall
+       be subject to the exclusive jurisdiction of the competent courts located in
+       <strong>India</strong>. You consent to personal jurisdiction in such courts
+       and waive any objection to such venue.</p>
+    <p style="margin-top:10px">Before initiating any formal legal proceedings, we encourage you to first contact us at
+       <a href="mailto:funmindostudio@gmail.com" style="color:var(--orange);font-weight:600;text-decoration:none">funmindostudio@gmail.com</a>
+       to resolve the matter informally. We will make reasonable efforts to address your concern within
+       <strong>30 days</strong>.</p>
+  </div>
+
+  <!-- 16 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">16</div><h2>Grievance Officer</h2></div>
+    <p>In accordance with the Information Technology Act, 2000 and the Digital Personal Data Protection
+       Act, 2023 (DPDPA), the Grievance Officer details are provided below:</p>
+    <div class="contact-card" style="margin-top:14px">
+      <div class="contact-icon">🏛️</div>
+      <div class="contact-text">
+        <h3>Grievance Officer — FunMindo</h3>
+        <p>
+          Organisation: <strong style="color:var(--text)">FunMindo</strong><br/>
+          Country of Operation: <strong style="color:var(--text)">India</strong><br/>
+          Email: <a href="mailto:funmindostudio@gmail.com">funmindostudio@gmail.com</a><br/>
+          Response time: Within 30 days of receiving your complaint
+        </p>
+      </div>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--muted)">We take all grievances seriously. If you are not satisfied with our response,
+       you may approach the appropriate consumer forum or the Data Protection Board of India.</p>
+  </div>
+
+  <!-- 17 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">17</div><h2>General Provisions</h2></div>
+    <p><strong>Entire Agreement.</strong> These Terms, together with the
+       <a href="https://funmindo.github.io/brainsurge/privacy.html"
+          style="color:var(--orange);font-weight:600;text-decoration:none">Privacy Policy</a>,
+       constitute the entire agreement between you and FunMindo regarding your use of Brain Surge,
+       and supersede all prior agreements or understandings.</p>
+    <p style="margin-top:10px"><strong>Severability.</strong> If any provision of these Terms is held to be unenforceable
+       or invalid by a court of competent jurisdiction, that provision shall be limited or eliminated to the
+       minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+    <p style="margin-top:10px"><strong>No Waiver.</strong> FunMindo's failure to enforce any right or provision of these Terms
+       shall not be deemed a waiver of such right or provision in the future.</p>
+    <p style="margin-top:10px"><strong>Assignment.</strong> You may not assign or transfer these Terms or any rights under them
+       without FunMindo's prior written consent. FunMindo may assign these Terms without restriction.</p>
+    <p style="margin-top:10px"><strong>Language.</strong> These Terms are written in English. In the event of any conflict with
+       a translation, the English version shall prevail.</p>
+  </div>
+
+  <!-- Contact block -->
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div class="contact-text">
+      <h3>Contact FunMindo</h3>
+      <p>Questions about these Terms or the Game?<br/>
+         Email: <a href="mailto:funmindostudio@gmail.com">funmindostudio@gmail.com</a> — We respond within 30 days.</p>
+    </div>
+  </div>
+
+  <!-- Related links -->
+  <div style="margin-top:20px;background:var(--soft);border-radius:var(--r);padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+    <span style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);flex-shrink:0">Related Documents</span>
+    <a href="https://funmindo.github.io/brainsurge/privacy.html"
+       style="display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--text);text-decoration:none;transition:border-color .2s"
+       onmouseover="this.style.borderColor='#FDDFA5'" onmouseout="this.style.borderColor='var(--border)'">
+      🔒 Privacy Policy
+    </a>
+    <a href="https://play.google.com/store/apps/developer?id=FunMindo"
+       target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--text);text-decoration:none;transition:border-color .2s"
+       onmouseover="this.style.borderColor='#FDDFA5'" onmouseout="this.style.borderColor='var(--border)'">
+      📱 Google Play Store ↗
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="fm-logo">FUNMINDO</p>
+    <p style="margin-top:4px">Brain Surge &nbsp;·&nbsp; Terms of Service v1.0</p>
+    <p>© 2026 FunMindo. All rights reserved.</p>
+    <p style="margin-top:8px;font-size:11.5px;color:#9CA3AF">
+      Hosted at: funmindo.github.io/brainsurge/terms.html &nbsp;·&nbsp; Last reviewed: June 25, 2026
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
